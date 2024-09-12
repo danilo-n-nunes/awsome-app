@@ -1,0 +1,11 @@
+version: '3'
+services:
+  react-native:
+    build: .
+    ports:
+      - '8081:8081'
+    volumes:
+      - .:/app
+    environment:
+      - ANDROID_HOME=/usr/local/android-sdk-linux
+    command: npm start
